@@ -1,13 +1,31 @@
 # TypeScript Essentials
-* TypeScript is a static typed Extension for JavaScript
-* TypeScript have to be transpield in JavaScript otherwise it can not be executed in Browsers
-* With TypeScript Type Errors occur while transpiling and not while runing the Code
 
-* To use the CLi the TypeScript Common Line Tool the following Command is used:
-```tsc -v```
+## Essentials
 
-* To run TypeScript in Watch Mode that transpiles all TypeScript Files in JavaScript in ECMAScript Version 3
-* ES3 is executed by any Browser
+- TypeScript is a static typed Extension for JavaScript
+- TypeScript have to be transpiled in JavaScript otherwise it can not be executed in Browsers
+- With TypeScript Type Errors occur while the Transpilation and not while running the Code
 
-* To run TypeScript iin Watch Mode and transpile all TypeScript Files into JavaScript Files:
-```tsc -w```
+## Reason for TypeScript
+
+- It reduces Error caused of:
+
+  - `null` or `undefined` Values
+  - Calling Function with the wrong Parameters
+  - Putting the wrong Fields in an Object
+
+- It allows to code faster caused of Awareness of the right Data like Parameters and Fields of an Object
+
+## Setup
+
+- Get installed TypeScript Version:
+
+```console
+ tsc -v
+```
+
+- Run Watch Mode to automatically transpile all TypeScript Files into JavaScript Files:
+
+```console
+ tsc -w
+```

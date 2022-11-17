@@ -24,35 +24,35 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var firstName = "Michael";
-var lastName = "Steinert";
+var firstName = 'Michael';
+var lastName = 'Steinert';
 var getFullName = function (firstName, lastName) {
-    return firstName + " " + lastName;
+    return firstName + ' ' + lastName;
 };
-console.log("Full Name: " + getFullName(firstName, lastName));
+console.log("Full Name: ".concat(getFullName(firstName, lastName)));
 /* Specific Class Types */
 var userA = {
-    firstName: "Michael",
-    lastName: "Steinert",
+    firstName: 'Michael',
+    lastName: 'Steinert',
     age: 27
 };
 var userB = {
-    id: "1",
-    firstName: "Marie",
-    lastName: "Schmidt",
+    id: '1',
+    firstName: 'Marie',
+    lastName: 'Schmidt',
     age: 26,
-    gender: "w",
+    gender: 'w',
     getInformation: function () {
-        return this.firstName + " " + this.lastName + " is " + this.age + " old";
+        return "".concat(this.firstName, " ").concat(this.lastName, " is ").concat(this.age, " old");
     }
 };
 var userC = {
     id: 2,
-    firstName: "Bruno",
-    lastName: "Armin",
+    firstName: 'Bruno',
+    lastName: 'Armin',
     age: 24,
     getInformation: function () {
-        return this.firstName + " " + this.lastName + " is " + this.age + " old";
+        return "".concat(this.firstName, " ").concat(this.lastName, " is ").concat(this.age, " old");
     }
 };
 console.log(userB.getInformation());
@@ -64,7 +64,7 @@ var User = /** @class */ (function () {
         User.userCount++;
     }
     User.prototype.getInformation = function () {
-        return this.firstName + " " + this.lastName + " is " + this.age + " old";
+        return "".concat(this.firstName, " ").concat(this.lastName, " is ").concat(this.age, " old");
     };
     return User;
 }());
@@ -83,11 +83,11 @@ var Admin = /** @class */ (function (_super) {
     };
     return Admin;
 }(User));
-var user = new User("Michael", "Steinert", 27);
+var user = new User('Michael', 'Steinert', 27);
 console.log(user.getInformation());
-var admin = new Admin("Marie", "Schmidt", 26, true);
+var admin = new Admin('Marie', 'Schmidt', 26, true);
 console.log(admin.getInformation());
-console.log("userCount: " + User.userCount);
+console.log("userCount: ".concat(User.userCount));
 /* Generics */
 var addIdToObject = function (object) {
     var id = Math.random().toString(4);
@@ -96,11 +96,11 @@ var addIdToObject = function (object) {
 var userWithId = addIdToObject(user);
 console.log(userWithId);
 /* Union Operator (to combine Data Types) */
-var pageName = "One";
+var pageName = 'One';
 pageName = 1;
 var errorMessage = null;
 var userD = null;
-var popularTags = ["block", "chain"];
+var popularTags = ['block', 'chain'];
 var maybePopularTags = null;
 /* Any, never, void and unknown Type */
 var vAny = 42;
@@ -109,14 +109,14 @@ var vUnknown = 42;
 //let s2: string = vUnknown; //Does not work
 var s2 = vUnknown;
 var doSomethingA = function () {
-    console.log("Return Void");
+    console.log('Return Void');
 };
 var doSomethingB = function () {
     while (true) {
-        console.log("Never ending Function");
+        console.log('Never ending Function');
     }
 };
-var pageNumber = "1";
+var pageNumber = '1';
 /* Explicit Type Cast */
 var numericPageNumber = pageName; // First convert the Data Type into unknown then into number
 /* Working with DOM - it is necessary to work with as-Types because TypeScript have not Access to the Markup */
