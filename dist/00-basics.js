@@ -118,18 +118,8 @@ var doSomethingB = function () {
 };
 var pageNumber = '1';
 /* Explicit Type Cast */
-var numericPageNumber = pageName; // First convert the Data Type into unknown then into number
-/* Working with DOM - it is necessary to work with as-Types because TypeScript have not Access to the Markup */
-/* TypeScript only static analyses the Code */
-/*
-const someInputElement = document.querySelector(".classForInputs") as HTMLInputElement;
-console.log(`someInputElement: ${someInputElement.value}`);
-
-someInputElement.addEventListener("blur", (event) => {
-    const eventTarget = event.target as HTMLInputElement;
-    console.log(`eventTarget: ${eventTarget}`);
-});
-*/
+// First convert the Data Type into unknown then into number
+var numericPageNumber = pageName;
 /* Enums */
 var Gender;
 (function (Gender) {
@@ -139,3 +129,10 @@ var Gender;
 var woman = Gender.W;
 console.log(Gender.M);
 console.log(woman);
+/* Records */
+var ids = {
+    40: 'a',
+    41: 'b'
+};
+ids[42] = 'c';
+console.log(ids[42] === 'c' ? true : false);

@@ -5,6 +5,7 @@
 - TypeScript is a static typed Extension for JavaScript
 - TypeScript have to be transpiled in JavaScript otherwise it can not be executed in Browsers
 - With TypeScript Type Errors occur while the Transpilation and not while running the Code
+- It forces types at Compile Time and not at Runtime
 
 ## Reason for TypeScript
 
@@ -21,11 +22,17 @@
 - Get installed TypeScript Version:
 
 ```console
- tsc -v
+tsc -v
 ```
 
 - Run Watch Mode to automatically transpile all TypeScript Files into JavaScript Files:
 
 ```console
- tsc -w
+tsc -w
+```
+
+- Execute TypeScript Files:
+
+```console
+ts-node functions-test.ts
 ```

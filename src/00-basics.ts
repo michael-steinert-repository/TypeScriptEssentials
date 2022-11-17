@@ -161,3 +161,12 @@ enum Gender {
 const woman: Gender = Gender.W;
 console.log(Gender.M);
 console.log(woman);
+
+/* Records */
+const ids: Record<number, string> = {
+  40: 'a',
+  41: 'b',
+};
+ids[42] = 'c';
+
+console.log(ids[42] === 'c' ? true : false);
